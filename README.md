@@ -19,6 +19,15 @@ php artisan sivera:install
 
 Laravel discovers the service provider automatically. The install command publishes `config/sivera.php`; it overwrites that file if it already exists. Run the install command on first installation and preserve any existing configuration before running it again.
 
+If the application previously used the local path repository from the SIVERA setup guide, remove that repository before requiring the public release:
+
+```shell
+composer config --unset repositories.sivera-reporter
+composer require naufal/sivera-reporter:^0.1
+```
+
+An existing `config/sivera.php` and its `.env` settings can stay in place; do not rerun the install command just to switch package sources.
+
 Register the application in SIVERA and generate a credential. Add the following to the monitored application's `.env`:
 
 ```dotenv
