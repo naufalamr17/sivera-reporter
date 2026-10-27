@@ -1,5 +1,5 @@
 {
-    "name": "naufal/sivera-reporter",
+    "name": "naufalamr17/sivera-reporter",
     "description": "Fail-safe Laravel exception reporter for SIVERA",
     "type": "library",
     "license": "MIT",

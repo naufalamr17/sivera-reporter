@@ -1,6 +1,6 @@
 # SIVERA Reporter
 
-`naufal/sivera-reporter` sends Laravel exceptions to a SIVERA monitoring server. It hooks into Laravel exception reporting and preserves the application's existing logging.
+`naufalamr17/sivera-reporter` sends Laravel exceptions to a SIVERA monitoring server. It hooks into Laravel exception reporting and preserves the application's existing logging.
 
 ## Requirements
 
@@ -13,7 +13,7 @@
 After the package has been published on Packagist, run these commands from the application you want to monitor:
 
 ```shell
-composer require naufal/sivera-reporter:^0.1
+composer require naufalamr17/sivera-reporter:^0.1
 php artisan sivera:install
 ```
 
@@ -23,10 +23,12 @@ If the application previously used the local path repository from the SIVERA set
 
 ```shell
 composer config --unset repositories.sivera-reporter
-composer require naufal/sivera-reporter:^0.1
+composer require naufalamr17/sivera-reporter:^0.1
 ```
 
 An existing `config/sivera.php` and its `.env` settings can stay in place; do not rerun the install command just to switch package sources.
+
+If the application already requires the earlier local package name `naufal/sivera-reporter`, remove that package with `composer remove naufal/sivera-reporter` before installing `naufalamr17/sivera-reporter`. The earlier vendor name is owned by someone else on Packagist and is not this package's public name.
 
 Register the application in SIVERA and generate a credential. Add the following to the monitored application's `.env`:
 
@@ -70,7 +72,7 @@ Set `SIVERA_TRANSPORT=queue` only when the monitored application already has a q
 ## Updates
 
 ```shell
-composer update naufal/sivera-reporter
+composer update naufalamr17/sivera-reporter
 ```
 
 Do not rerun `sivera:install` on every update because it overwrites the published configuration. Review configuration changes before applying them.
