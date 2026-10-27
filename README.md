@@ -2,6 +2,8 @@
 
 `naufalamr17/sivera-reporter` sends Laravel exceptions to a SIVERA monitoring server. It hooks into Laravel exception reporting and preserves the application's existing logging.
 
+The monitoring dashboard and ingestion API are maintained in the [SIVERA server repository](https://github.com/naufalamr17/sivera).
+
 ## Requirements
 
 - A Laravel application. The package allows Laravel 10–13; automated integration tests currently run on Laravel 13.
