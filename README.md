@@ -44,6 +44,8 @@ SIVERA_CLIENT_ID=your-generated-client-id
 SIVERA_SECRET=your-generated-secret
 SIVERA_ENVIRONMENT=production
 SIVERA_TRANSPORT=http
+SIVERA_CONNECT_TIMEOUT=3
+SIVERA_TIMEOUT=8
 ```
 
 Use the application slug as `SIVERA_APP_ID`. The environment must match the environment registered in SIVERA. Use a separate registration and credential for each application or environment. Keep credentials out of source control.
